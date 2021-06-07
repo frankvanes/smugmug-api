@@ -1,0 +1,11 @@
+{
+  "name": "smugmug-api",
+  "version": "1.0.0",
+  "description": "A node.js implementation of the SmugMug API with OAuth 1.0a authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Frank van Es",
+  "license": "ISC"
+}

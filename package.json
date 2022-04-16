@@ -1,11 +1,38 @@
 {
   "name": "smugmug-api",
-  "version": "1.0.0",
-  "description": "A node.js implementation of the SmugMug API with OAuth 1.0a authentication",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "A TypeScript/node.js implementation of the SmugMug API with OAuth 1.0a authentication",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "author": "Frank van Es",
-  "license": "ISC"
+  "author": "Frank van Es <crest.meteor0e@icloud.com> (https://www.frankvanes.org)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankvanes/smugmug-api.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/frankvanes/smugmug-api/issues"
+  },
+  "homepage": "https://github.com/frankvanes/smugmug-api#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.5.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "oauth": "^0.9.15"
+  }
 }

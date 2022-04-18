@@ -2,11 +2,15 @@ import https from 'https';
 import oauth from 'oauth';
 
 class SmugMug {
+  private static instance: SmugMug;
   private oauthToken: string;
   private oauthTokenSecret: string;
   private oAuth: any;
 
   constructor(apiKey: string, apiSecret: string, oauthToken: string, oauthTokenSecret: string) {
+    if (SmugMug.instance) {
+      throw new Error("Error: already instantiated. Use getInstance() instead");
+    }
     this.oauthToken = oauthToken;
     this.oauthTokenSecret = oauthTokenSecret;
 
@@ -21,8 +25,16 @@ class SmugMug {
       null,
       {"Accept": "application/json"}
     );
-    console.log(this.oAuth);
+    SmugMug.instance = this;
+  }
+
+  public static getInstance(): SmugMug {
+    if (!SmugMug.instance) {
+      throw new Error("Error: not yet instantiated. Use constructor instead");
+    }
+    return SmugMug.instance;
   }
 }
 
+new SmugMug('abc','def','ghi','jkl');
 new SmugMug('abc','def','ghi','jkl');

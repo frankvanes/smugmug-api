@@ -72,9 +72,9 @@ export class SmugMug {
 
           if (!res) return reject(new Error(`Cannot parse response (URL: ${SmugMug.BASE_URL}${url})`));
           const response = res.Response;
-          
-          resolve(SmugMugFactory.create(response));
-          //resolve(SmugMug.formatObject(response));
+          const expansions = res.Expansions || {};
+
+          resolve(SmugMugFactory.create(response, expansions));
         }
       );
     });

@@ -8,7 +8,7 @@ import { AlbumImage } from "./AlbumImage.js";
 import { Folder } from "./Folder.js";
 
 export class SmugMugFactory {
-  public static create(obj: SmugMugResponse): SmugMugBase {
+  public static create(obj: SmugMugResponse, expansions: any): SmugMugBase {
     switch (obj.Locator) {
       case "User": {
         return new User(obj);
@@ -16,7 +16,8 @@ export class SmugMugFactory {
       case "UserProfile": {
         return new UserProfile(obj);
       }
-      case "Image": {
+      case "Image":
+      case "BioImage": {
         return new Image(obj);
       }
       case "Node": {

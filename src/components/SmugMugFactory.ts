@@ -1,11 +1,11 @@
-import { SmugMugBase } from "./SmugMugBase.js";
-import { User } from "./User.js";
-import { UserProfile } from "./UserProfile.js";
-import { Image } from "./Image.js";
-import { Node } from "./Node.js";
-import { Album } from "./Album.js";
-import { AlbumImage } from "./AlbumImage.js";
-import { Folder } from "./Folder.js";
+import { SmugMugBase } from "./SmugMugBase";
+import { User } from "./User";
+import { UserProfile } from "./UserProfile";
+import { Image } from "./Image";
+import { Node } from "./Node";
+import { Album } from "./Album";
+import { AlbumImage } from "./AlbumImage";
+import { Folder } from "./Folder";
 
 export class SmugMugFactory {
   public static create(obj: SmugMugResponse, expansions: any): SmugMugBase {

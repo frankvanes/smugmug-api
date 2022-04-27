@@ -1,8 +1,7 @@
-import { SmugMug } from './SmugMug.js';
-import { SmugMugBase } from './SmugMugBase.js';
+import { SmugMug } from "./SmugMug";
+import { SmugMugBase } from "./SmugMugBase";
 
 export class UserProfile extends SmugMugBase {
-
   constructor(obj: SmugMugResponse) {
     super(obj);
   }

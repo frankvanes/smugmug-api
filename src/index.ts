@@ -1,4 +1,4 @@
-export { SmugMug } from './components/SmugMug.js';
-export { SmugMugBase } from './components/SmugMugBase.js';
-export { User } from './components/User.js';
-export { UserProfile } from './components/UserProfile.js';
+export { SmugMug } from "./components/SmugMug";
+export { SmugMugBase } from "./components/SmugMugBase";
+export { User } from "./components/User";
+export { UserProfile } from "./components/UserProfile";

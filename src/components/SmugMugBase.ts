@@ -1,5 +1,5 @@
-import { UserProfile } from "./UserProfile.js";
-import { SmugMug } from "./SmugMug.js";
+import { UserProfile } from "./UserProfile";
+import { SmugMug } from "./SmugMug";
 
 export class SmugMugBase {
   private data: SmugMugObject;

@@ -9,9 +9,10 @@ interface SmugMugResponse {
 
 interface SmugMugObject {
   Uri: string;
+  WebUri: string;
   UriDescription: string;
   ResponseLevel: string;
-  Uris: SmugMugResponse[];
+  Uris: object;
 }
 
 interface SmugMugUserProfile extends SmugMugObject {

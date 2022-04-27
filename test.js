@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const SmugMug = require("./dist/index.js");
 const secrets = require("./.secret.settings.json");
 

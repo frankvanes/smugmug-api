@@ -1,14 +1,15 @@
-import https from "https";
 import { OAuth } from "oauth";
 import { SmugMugBase } from "./SmugMugBase";
 import { SmugMugFactory } from "./SmugMugFactory";
 
+/*
 interface Request {}
 
 interface Response {
   Uri: string;
   Locator: string;
 }
+*/
 
 interface HasUris {
   Uris: object[];

@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/frankvanes/smugmug-api#readme",
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown --loglevel silent"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",

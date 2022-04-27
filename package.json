@@ -9,6 +9,7 @@
     "clean": "rm -rf dist",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "tsc",
+    "ts-node": "ts-node",
     "start": "ts-node src/index.ts",
     "prepare": "husky install"
   },

@@ -10,7 +10,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "tsc",
     "ts-node": "ts-node",
-    "start": "ts-node src/index.ts",
     "prepare": "husky install"
   },
   "author": "Frank van Es <crest.meteor0e@icloud.com> (https://www.frankvanes.org)",

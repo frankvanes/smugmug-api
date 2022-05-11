@@ -1,4 +1,5 @@
-import { SmugMug } from "./SmugMug";
+import { SmugMug } from ".";
+import { SmugMugResponse } from "../types";
 
 export class SmugMugBase {
   private uri: string;

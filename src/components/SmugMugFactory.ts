@@ -1,11 +1,14 @@
-import { SmugMugBase } from "./SmugMugBase";
-import { User } from "./User";
-import { UserProfile } from "./UserProfile";
-import { Image } from "./Image";
-import { Node } from "./Node";
-import { Album } from "./Album";
-import { AlbumImage } from "./AlbumImage";
-import { Folder } from "./Folder";
+import {
+  SmugMugBase,
+  User,
+  UserProfile,
+  Image,
+  Node,
+  Album,
+  AlbumImage,
+  Folder,
+} from ".";
+import { SmugMugResponse } from "../types";
 
 export class SmugMugFactory {
   public static create(obj: SmugMugResponse, expansions: any): SmugMugBase {

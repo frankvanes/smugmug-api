@@ -1,19 +1,5 @@
 import { OAuth } from "oauth";
-import { SmugMugBase } from "./SmugMugBase";
-import { SmugMugFactory } from "./SmugMugFactory";
-
-/*
-interface Request {}
-
-interface Response {
-  Uri: string;
-  Locator: string;
-}
-*/
-
-interface HasUris {
-  Uris: object[];
-}
+import { SmugMugBase, SmugMugFactory } from ".";
 
 export class SmugMug {
   private static instance: SmugMug;
@@ -68,7 +54,7 @@ export class SmugMug {
     const params =
       (expansions || url.includes("?") ? "&" : "?") +
       `count=${SmugMug.PAGE_SIZE}`;
-    //console.log(`${resourceUrl}${expansions}`);
+
     return new Promise(function (resolve, reject) {
       oAuth.get(
         `${resourceUrl}${expansions}${params}`,

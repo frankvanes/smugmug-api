@@ -1,5 +1,5 @@
-import { SmugMug } from "./SmugMug";
-import { SmugMugBase } from "./SmugMugBase";
+import { SmugMug, SmugMugBase } from ".";
+import { SmugMugResponse } from "../types";
 
 export class UserProfile extends SmugMugBase {
   constructor(obj: SmugMugResponse) {

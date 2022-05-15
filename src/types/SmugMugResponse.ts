@@ -1,4 +1,4 @@
-import { SmugMugUserProfile } from "./SmugMugUserProfile";
+import { SmugMugUser, SmugMugUserProfile } from ".";
 
 export interface SmugMugResponse {
   Uri: string;
@@ -6,5 +6,6 @@ export interface SmugMugResponse {
   EndpontType: string;
   Locator: string;
   LocatorType: string;
+  User?: SmugMugUser;
   UserProfile?: SmugMugUserProfile;
 }

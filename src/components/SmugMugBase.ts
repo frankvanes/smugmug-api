@@ -1,20 +1,20 @@
 import { SmugMug } from ".";
-import { UrisType, SmugMugResponse } from "../types";
+import { LocatorType, UrisType, SmugMugResponse } from "../types";
 
 export class SmugMugBase {
-  private uri: string;
-  private webUri: string;
-  private uriDescription: string;
-  private uris: UrisType;
-  private responseLevel: string;
+  private uri: string | undefined;
+  private webUri: string | undefined;
+  private uriDescription: string | undefined;
+  private uris: UrisType | undefined;
+  private responseLevel: string | undefined;
 
   public constructor(obj: SmugMugResponse) {
-    const data = (obj as any)[obj.Locator];
-    this.uri = data.Uri;
-    this.webUri = data.WebUri;
-    this.uriDescription = data.UriDescription;
-    this.responseLevel = data.ResponseLevel;
-    this.uris = data.Uris;
+    const data = obj[obj.Locator as LocatorType];
+    this.uri = data?.Uri;
+    this.webUri = data?.WebUri;
+    this.uriDescription = data?.UriDescription;
+    this.responseLevel = data?.ResponseLevel;
+    this.uris = data?.Uris;
   }
 
   // Naive implementation of retrieveUri. Must be improved and extended to retrieveUris(names[]).

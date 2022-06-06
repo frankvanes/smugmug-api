@@ -5,6 +5,7 @@ export interface SmugMugBaseType {
   ResponseLevel: string;
   Uris: UrisType;
 }
+export type LocatorType = "User" | "UserProfile";
 
 export interface IndexedType {
   [index: string]: UriType;

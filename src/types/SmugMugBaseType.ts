@@ -6,14 +6,16 @@ export interface SmugMugBaseType {
   Uris: UrisType;
 }
 
-export interface UrisType {
+export interface IndexedType {
   [index: string]: UriType;
 }
 
-export interface UriType {
+export type UrisType = IndexedType;
+
+export type UriType = UrisType & {
   Uri: string;
   Locator: string;
   LocatorType: string;
   UriDescription: string;
   EndpointType: string;
-}
+};

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable */
 const SmugMug = require("./dist/index.js");
 const secrets = require("./.secret.settings.json");
 
@@ -7,7 +7,7 @@ new SmugMug.SmugMug(apiKey, apiSecret, oauthToken, oauthTokenSecret);
 
 SmugMug.User.byNickName("frankvanes").then(async (res) => {
   console.log(res);
-  const bio1 = await res.retrieveUri("BioImagea");
-  const bio2 = await res.retrieveUri("BioImage");
+  const bio1 = await res.retrieveUri("BioImage");
+  //const bio2 = await res.retrieveUri("BioImage");
   //console.log(bio2);
 });
